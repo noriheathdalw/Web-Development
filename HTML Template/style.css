@@ -1,0 +1,412 @@
+/*
+Theme Name: Richard
+Theme URI: https://templatesjungle.com/
+Author: TemplatesJungle
+Author URI: https://templatesjungle.com/
+Description: Richard is specially developed Websites Template for Online CV Resume.
+Version: 1.1
+*/
+
+/*--------------------------------------------------------------
+This is main CSS file that contains custom style rules used in this template
+--------------------------------------------------------------*/
+
+/*------------------------------------*\
+    Table of contents
+\*------------------------------------*/
+
+/*------------------------------------------------
+
+CSS STRUCTURE:
+
+1. VARIABLES
+
+2. GENERAL TYPOGRAPHY
+  2.1 Padding
+  2.2 Offcanvas
+  2.3 Button
+  2.4 Svg
+  2.5 Swiper
+  2.6 Form
+  2.7 Breadcrumb
+  2.8 Pagination
+  2.9 Accordion
+
+3. SITE STRUCTURE
+  3.1 Header Section
+  3.2 Expersite Section
+
+4. Pages Style
+  4.1 Service page
+  4.2 Projects Page
+    
+
+  
+/*--------------------------------------------------------------
+/** 1. VARIABLES
+--------------------------------------------------------------*/
+:root {
+  /* widths for rows and containers
+       */
+  --header-height: 160px;
+  --header-height-min: 80px;
+}
+
+/* on mobile devices below 600px
+   */
+@media screen and (max-width: 600px) {
+  :root {
+    --header-height: 100px;
+    --header-height-min: 80px;
+  }
+}
+
+/* Theme Colors */
+:root {
+  --accent-color: #E54646;
+  --dark-color: #222222;
+  --light-dark-color: #727272;
+  --light-color: #fff;
+  --grey-color: #dbdbdb;
+  --light-grey-color: #fafafa;
+  --primary-color: #E54646;
+  --light-primary-color: #eef1f3;
+}
+
+/* Fonts */
+:root {
+  --body-font: 'Roboto', sans-serif;
+}
+
+
+body {
+  --bs-link-color: #333;
+  --bs-link-hover-color: #333;
+
+  --bs-link-color-rgb: 40, 40, 40;
+  --bs-link-hover-color-rgb: 0, 0, 0;
+
+  --bs-light-rgb: 248, 248, 248;
+
+  --bs-font-sans-serif: 'Roboto', sans-serif;
+  --bs-body-font-family: var(--bs-font-sans-serif);
+  --bs-body-font-size: 1rem;
+  --bs-body-font-weight: 400;
+  --bs-body-line-height: 2;
+  --bs-body-color: #333333;
+
+  --bs-primary: #E54646;
+  --bs-primary-rgb: 229, 70, 70;
+
+  --bs-primary-bg-subtle: #FFF9EB;
+  --bs-border-color: #F7F7F7;
+
+  --bs-secondary-rgb: 230, 243, 251;
+
+  --bs-success-rgb: 238, 245, 228;
+  --bs-danger-rgb: 249, 235, 231;
+  --bs-warning-rgb: 255, 249, 235;
+  --bs-info-rgb: 230, 243, 250;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #333333;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+h6 {
+  color: #333333;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 0.9rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.breadcrumb.text-white {
+  --bs-breadcrumb-divider-color: #fff;
+  --bs-breadcrumb-item-active-color: var(--bs-primary);
+}
+
+.dropdown-menu {
+  --bs-dropdown-link-active-bg: var(--bs-primary);
+}
+
+.secondary-font {
+  font-family: var(--secondary-font);
+  font-weight: 300;
+}
+
+/*--------------------------------------------------------------
+/** 2. GENERAL TYPOGRAPHY
+--------------------------------------------------------------*/
+
+/* Padding
+------------------------------------------------------------- */
+.padding-large {
+  padding-top: 16rem;
+  padding-bottom: 16rem;
+}
+
+.padding-medium {
+  padding-top: 9rem;
+  padding-bottom: 9rem;
+}
+
+.padding-small {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .padding-large {
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+  }
+
+  .padding-medium {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .padding-medium-2 {
+    padding-top: 10rem;
+    padding-bottom: 6rem;
+  }
+}
+
+/* Offcanvas
+------------------------------------------------------------- */
+
+.offcanvas {
+  background-color: #222222;
+}
+
+/* Button
+------------------------------------------------------------- */
+
+.btn {
+  border-radius: 0;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.btn-primary {
+  padding: 1.2rem 3rem;
+  transition: all 0.3s ease-in;
+  --bs-btn-color: #FFFFFF;
+  --bs-btn-bg: var(--accent-color);
+  --bs-btn-border-color: var(--accent-color);
+  --bs-btn-hover-color: #FFFFFF;
+  --bs-btn-hover-bg: #e43232;
+  --bs-btn-hover-border-color: #e43232;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #FFFFFF;
+  --bs-btn-active-bg: var(--accent-color);
+  --bs-btn-active-border-color: var(--accent-color);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #FFFFFF;
+  --bs-btn-disabled-bg: #d3d7dd;
+  --bs-btn-disabled-border-color: var(--accent-color);
+}
+
+
+/* Svg
+------------------------------------------------------------- */
+svg.quote {
+  color: rgba(51, 51, 51, 0.10);
+}
+
+
+/* Swiper
+------------------------------------------------------------- */
+/* testimonial section style */
+.swiper-pagination-bullet-active {
+  opacity: var(--swiper-pagination-bullet-opacity, 1);
+  background: var(--dark-color);
+}
+
+.swiper-pagination-bullet {
+  width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 10px));
+  height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 10px));
+}
+
+/* Form
+------------------------------------------------------------- */
+.form-check-input:checked {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  box-shadow: none;
+}
+
+.form-check-input:focus {
+  border-color: var(--primary-color);
+  outline: 0;
+  box-shadow: none;
+}
+
+.form-control {
+  box-shadow: none;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--dark-color);
+  outline: 0;
+  box-shadow: none;
+}
+
+input,
+select,
+textarea {
+  border-color: var(--dark-color);
+  outline: 0;
+  box-shadow: none;
+}
+
+select:focus {
+  box-shadow: none;
+}
+
+/* Breadcrumb
+------------------------------------------------------------- */
+.breadcrumb-item+.breadcrumb-item::before {
+  color: var(--bs-light);
+  position: relative;
+}
+
+/* Pagination
+------------------------------------------------------------- */
+.pagination {
+  --bs-pagination-color: var(--black-color);
+  --bs-pagination-hover-color: #fff;
+  --bs-pagination-hover-bg: var(--primary-color);
+  --bs-pagination-hover-border-color: var(--primary-color);
+  --bs-pagination-focus-color: #fff;
+  --bs-pagination-focus-bg: var(--primary-color);
+  --bs-pagination-focus-box-shadow: none;
+  --bs-pagination-active-bg: var(--primary-color);
+  --bs-pagination-active-border-color: var(--primary-color);
+}
+
+/* Accordion
+------------------------------------------------------------- */
+.accordion {
+  --bs-accordion-btn-icon: url('https://api.iconify.design/ion/caret-down.svg?color=%343536&width=30');
+  --bs-accordion-btn-active-icon: url('https://api.iconify.design/ion/caret-down.svg?color=%343536&width=30');
+  --bs-accordion-border-radius: 0px;
+}
+
+.accordion-item {
+  color: inherit;
+  box-shadow: 1px 3px 3px 1px rgba(121, 121, 121, 0.096);
+  border: none;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+
+/*----------------------------------------------*/
+/* 3. SITE STRUCTURE */
+/*----------------------------------------------*/
+
+
+/*   3.1 Header Section
+------------------------------------------------------------- */
+.nav-link {
+  color: var(--light-color);
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+  color: var(--accent-color);
+}
+
+.nav-link:focus,
+.nav-link:hover {
+  color: var(--accent-color);
+}
+
+/*   3.2 Expersite Section
+------------------------------------------------------------- */
+.experties-number-size {
+  font-weight: 400;
+  font-size: 150px;
+}
+
+
+/*----------------------------------------------*/
+/* 4. Pages Style */
+/*----------------------------------------------*/
+
+/* 4.1 Service page
+------------------------------------------------------------- */
+
+a.icon-link {
+  font-size: 1rem;
+  display: inline-table;
+}
+
+a.icon-link:after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid var(--accent-color);
+  width: 20%;
+  transition: width 0.2s ease-out;
+}
+
+a.icon-link:hover:after {
+  width: 100%;
+}
+
+
+/* 4.2 Projects Page
+/*----------------------------------------------*/
+
+.project-content .project-img {
+  transition: all 0.5s ease-in-out;
+}
+
+.project-content:hover .project-img {
+  opacity: 0.3;
+}
+
+.project-description {
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.project-content:hover .project-description {
+  opacity: 1;
+}
+
+button.filter-button {
+  border: 0;
+  border-radius: 0px;
+  background: transparent;
+  text-transform: uppercase;
+  color: var(--black-color);
+  transition: all 0.3s ease-in-out;
+}
+
+button.filter-button.active,
+button.filter-button:hover {
+  color: var(--bs-light);
+  background: var(--primary-color);
+}
