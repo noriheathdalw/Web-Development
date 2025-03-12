@@ -1,0 +1,512 @@
+/*
+Theme Name: Loaner - Loan Company Bootstrap 5 HTML Website Template
+Theme URI: https://templatesjungle.com/
+Author: TemplatesJungle
+Author URI: https://templatesjungle.com/
+Description: Loaner is specially designed for Loan Company by TemplatesJungle.
+Version: 1.1
+*/
+
+/*--------------------------------------------------------------
+This is main CSS file that contains custom style rules used in this template
+--------------------------------------------------------------*/
+
+/*------------------------------------*\
+    Table of contents
+\*------------------------------------*/
+
+/*------------------------------------------------
+
+CSS STRUCTURE:
+
+1. VARIABLES
+
+2. GENERAL TYPOGRAPHY
+  2.1 General Styles
+  2.2 Background Color
+  2.3 Section
+    - Section Paddings
+    - Section Margins
+    - Section Title
+    - Content width
+  2.4 Buttons
+    - Primary Buttons
+    - Outline Buttons
+
+3. CONTENT ELEMENTS
+  - Dropdown
+  - Form
+  - Svg Color
+  - Swiper
+  - Offcanvas
+
+4. SITE STRUCTURE
+  4.1 Header
+  4.2 Feature Section
+  4.3 About Section
+  4.4 Process SEection
+
+    
+/*--------------------------------------------------------------
+/** 1. VARIABLES
+--------------------------------------------------------------*/
+:root {
+  --accent-color: #4794EF;
+  --black-color: #111111;
+  --light-black-color: #747474;
+  --dark-color: #111111;
+  --primary-color: #4794EF;
+  --background-color: #FFFFFF;
+  --gray-color: #B8B8B8;
+  --yellow-color: #FBB911;
+  --bs-dark-rgb: 17, 17, 17;
+  --bs-gray-100: #BEBEBE;
+  --bs-gray-300: #DCDCDC;
+  --bs-primary-text-emphasis: var(--primary-color);
+
+  --bs-light-rgb: rgba(255, 255, 255, 1);
+  --bs-primary-rgb: 29, 21, 124;
+  --light-color: #fdfdfd;
+  --swiper-theme-color: #111 !important;
+  --cadet-blue-color: #9AB4B7;
+}
+
+/* Fonts */
+:root {
+  --body-font: "Poppins", sans-serif;
+  --heading-font: "Playfair Display", serif;
+}
+
+/*----------------------------------------------*/
+/* 2 GENERAL TYPOGRAPHY
+/*----------------------------------------------*/
+
+/* 2.1 General Styles
+/*----------------------------------------------*/
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--light-color);
+  font-family: var(--body-font);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 164%;
+  letter-spacing: 0.32px;
+  color: var(--dark-color);
+  margin: 0;
+}
+
+p {
+  font-size: 18px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+
+}
+
+a:hover {
+  color: var(--tertiary-color);
+}
+
+.text-light {
+  color: var(--light-color) !important;
+}
+
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
+.text-black {
+  color: var(--black-color) !important;
+}
+
+/* 2.2 Background Color
+/*----------------------------------------------*/
+.bg-light {
+  background-color: var(--light-color) !important;
+}
+
+.bg-primary {
+  background-color: var(--primary-color) !important;
+}
+
+.bg-secondary {
+  background-color: var(--secondary-color) !important;
+}
+
+.bg-tertiary {
+  background-color: var(--tertiary-color) !important;
+}
+
+.bg-gray {
+  background-color: var(--bs-gray-100) !important;
+}
+
+.bg-background {
+  background-color: var(--background-color) !important;
+}
+
+/*--------------------------------------------------------------
+/** 2.3 Section
+--------------------------------------------------------------*/
+/* - Section Padding
+--------------------------------------------------------------*/
+.padding-small {
+  padding-top: 8em;
+  padding-bottom: 8em;
+}
+
+.padding-medium {
+  padding-top: 10em;
+  padding-bottom: 10em;
+}
+
+.padding-large {
+  padding-top: 12em;
+  padding-bottom: 12em;
+}
+
+/* - Section Margin
+--------------------------------------------------------------*/
+.margin-small {
+  margin-top: 8.125em;
+  margin-bottom: 8.125em;
+}
+
+.margin-medium {
+  margin-top: 10em;
+  margin-bottom: 10em;
+}
+
+.margin-large {
+  margin-top: 12em;
+  margin-bottom: 12em;
+}
+
+
+/* - Section Title
+--------------------------------------------------------------*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--black-color);
+  text-transform: capitalize;
+  letter-spacing: 0.84px;
+  line-height: 115%;
+  font-family: var(--heading-font);
+}
+
+.display-3 {
+  font-weight: 500;
+}
+
+.display-1 {
+  font-family: var(--body-font);
+}
+
+@media (min-width: 1200px) {
+  .display-1 {
+    font-size: 6.5rem;
+  }
+}
+
+/* - Content width
+--------------------------------------------------------------*/
+.container-md {
+  max-width: 1500 px;
+}
+
+.container-lg {
+  max-width: 1750px;
+}
+
+@media (min-width: 1920px) {
+  .container-md {
+    max-width: 1500px;
+  }
+}
+
+
+/*--------------------------------------------------------------
+/** 2.4 Buttons
+--------------------------------------------------------------*/
+.btn {
+  --bs-btn-padding-x: 2rem;
+  --bs-btn-padding-y: 1.2rem;
+  --bs-btn-font-size: 1rem;
+  --bs-btn-font-weight: 500;
+  text-transform: uppercase;
+  transition: 0.3s ease-in-out;
+  border-radius: 0;
+  letter-spacing: 0.5px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+/* Button Primary
+------------------------------------------------------------- */
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--primary-color);
+  --bs-btn-border-color: var(--primary-color);
+  --bs-btn-hover-color: var(--primary-color);
+  --bs-btn-hover-bg: var(--background-color);
+  --bs-btn-hover-border-color: var(--primary-color);
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--primary-color);
+  --bs-btn-active-border-color: var(--primary-color);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: var(--primary-color);
+  --bs-btn-disabled-border-color: var(--primary-color);
+}
+
+/*--------------------------------------------------------------
+/** 3.CONTENT ELEMENTS
+--------------------------------------------------------------*/
+
+/* Dropdown
+------------------------------------------------------------- */
+.dropdown-item {
+  color: var(--dark-color);
+}
+
+.dropdown-item.active,
+.dropdown-item:hover,
+.dropdown-item:active {
+  color: var(--dark-color);
+  background-color: var(--bs-gray-300);
+}
+
+/* Form
+------------------------------------------------------------- */
+.form-check-input:checked {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  box-shadow: none;
+}
+
+.form-check-input:focus {
+  border-color: var(--accent-color);
+  outline: 0;
+  box-shadow: none;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--dark-color);
+  outline: 0;
+  box-shadow: none;
+}
+
+input,
+select,
+textarea {
+  border-color: var(--dark-color);
+  outline: 0;
+  box-shadow: none;
+}
+
+select:focus {
+  box-shadow: none;
+}
+
+/* Svg Color
+------------------------------------------------------------- */
+svg.light-color {
+  color: var(--light-color);
+}
+
+svg.dark-color {
+  color: var(--dark-color);
+}
+
+svg.primary-color {
+  color: var(--primary-color);
+}
+
+svg.accent-color {
+  color: var(--accent-color);
+}
+
+svg.primary-color-500 {
+  color: var(--bs-primary-rgb);
+}
+
+/* Swiper
+------------------------------------------------------------- */
+.main-slider-button-next.swiper-button-disabled,
+.main-slider-button-prev.swiper-button-disabled {
+  opacity: .35;
+  cursor: auto;
+  pointer-events: none;
+}
+
+
+/* Offcanvas
+------------------------------------------------------------- */
+.offcanvas {
+  height: 110vh;
+}
+
+/*----------------------------------------------*/
+/* 4 SITE STRUCTURE */
+/*----------------------------------------------*/
+
+/* 4.1 Header Section
+/*----------------------------------------------*/
+
+.header-top {
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: 300;
+  transition: transform 0.8s ease-in-out;
+}
+
+.header-top.hidden {
+  transform: translateY(-100%);
+}
+
+#primary-header {
+  transition: transform 0.8s ease-in-out;
+}
+
+#primary-header.hidden {
+  transform: translateY(-36%);
+}
+
+a.nav-link {
+
+  color: var(--black-color);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+a.nav-link:focus {
+  color: var(--primary-color);
+}
+
+a.nav-link.active,
+.nav-link.show,
+a.nav-link:hover {
+  color: var(--primary-color) !important;
+  outline: none;
+}
+
+#primary-header .dropdown .search::after {
+  content: none;
+}
+
+#primary-header .search-dropdown .dropdown-menu {
+  width: 260px;
+}
+
+#primary-header .search-dropdown .dropdown-menu input {
+  min-width: 100%;
+}
+
+#primary-header .search-dropdown .dropdown-menu button {
+  padding: 0 12px;
+  min-height: -webkit-fill-available;
+  border-radius: 0.25rem;
+}
+
+@media only screen and (max-width: 610px) {
+  #primary-header.hidden {
+    transform: translateY(-55%);
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  a.nav-link {
+    color: var(--dark-color);
+    font-size: 2rem;
+    padding: 1rem 0 1rem 0 !important;
+  }
+
+  a.nav-link:focus {
+    color: var(--dark-color);
+  }
+
+  a.nav-link.active,
+  .nav-link.show,
+  a.nav-link:hover {
+    color: var(--dark-color) !important;
+  }
+}
+
+
+/* 4.2 Feature Section
+/*----------------------------------------------*/
+#features {
+  transform: translateX(-50%);
+  left: 50%;
+  position: absolute;
+}
+
+@media only screen and (max-width: 999px) {
+  .features {
+    bottom: -200px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .features {
+    bottom: -100px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #features .btn.d-md-none.d-sm-block {
+    position: relative;
+    top: 40px;
+    /* Adjust this value to move the button higher */
+  }
+}
+
+/* 4.3 About Section
+/*----------------------------------------------*/
+svg.balloon {
+  color: var(--primary-color);
+}
+
+.icon-box:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.icon-box:hover h4 {
+  color: white;
+}
+
+
+/* 4.4 Process Section
+/*----------------------------------------------*/
+
+.text-outline-black {
+  color: white;
+  font-weight: bolder;
+  -webkit-text-stroke: 1px #BEBEBE;
+}
+
+.process-content:hover {
+  outline: #4794EF;
+  border-radius: 10px;
+}
